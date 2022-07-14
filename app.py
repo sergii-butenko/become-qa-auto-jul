@@ -19,6 +19,11 @@ test#6
 
 test#7
 
+<<<<<<< HEAD
 test#8
 
 test#9
+=======
+
+test#8
+>>>>>>> 2e71439041ad839bfb70b2faab2a0cef48d91fa2

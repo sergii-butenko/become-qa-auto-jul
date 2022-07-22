@@ -1,8 +1,8 @@
-def test_login():
+def test_login_user():
     pass
 
 
-def test_logout():
+def test_logout_user():
     assert True
 
 

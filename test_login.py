@@ -1,8 +1,8 @@
-def test_login():
+def test_signin():
     pass
 
 
-def test_logout():
+def test_singout():
     assert True
 
 

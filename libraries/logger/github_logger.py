@@ -1,2 +1,0 @@
-class GitHubLogger:
-    pass

@@ -13,12 +13,14 @@ def fixture_42():
     yield math_operations
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture()
 def android_board_123():
     Print.pretty_print("Open connection start")
     board = BoardAndroid('123', '127.0.0.1')
     board.connect()
+
     yield board
+
     board.disconnect()
     Print.pretty_print("Open connection end")
     

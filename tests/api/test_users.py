@@ -1,3 +1,4 @@
+from providers.data.users_provider import UserProvider
 import requests
 import pytest
 
@@ -9,10 +10,11 @@ def test_http_status_code200(github_api_client):
 
 
 def test_user_exists(github_api_client):
-    user = github_api_client.get_user('defunkt')
+    user = UserProvider.existing_user()
+    user = github_api_client.get_user(user['username'])
 
-    assert user['login'] == 'defunkt'
-    assert user['id'] == 2
+    assert user['login'] == user['username']
+    assert user['id'] == user['id']
 
 
 def test_user_non_exists(github_api_client):

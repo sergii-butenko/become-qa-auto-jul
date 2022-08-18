@@ -1,5 +1,5 @@
 class User:
 
-    def __init__(self, username, id) -> None:
-        self.username = username
+    def __init__(self, login, id) -> None:
+        self.login = login
         self.id = id

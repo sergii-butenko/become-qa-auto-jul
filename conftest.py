@@ -1,10 +1,10 @@
-from applications.ui.github_ui import GitHubUI
-from config.config import Config
-from applications.api.github_api import GitHubAPI
 import pytest
-
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
+
+from applications.api.github_api import GitHubAPI
+from applications.ui.github_ui import GitHubUI
+from config.config import Config
 
 
 @pytest.fixture(scope="session")

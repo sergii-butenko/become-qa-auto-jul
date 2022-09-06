@@ -1,5 +1,4 @@
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.by import By
+from applications.ui.pages.page_login import PageLogin
 
 
 class GitHubUI:
@@ -8,18 +7,10 @@ class GitHubUI:
         self.base_url = base_url
         self.driver = driver
 
+        self.login_page = PageLogin(self.driver, self.base_url)
+
     def login(self, username, userpassword):
-        self.driver.get(f"{self.base_url}/login")
-
-        elem = self.driver.find_element(By.ID, "login_field")
-        elem.send_keys(username)
-
-        elem = self.driver.find_element(By.ID, "password")
-        elem.send_keys(userpassword)
-
-        elem.send_keys(Keys.RETURN)
-
-        return True
+        return self.login_page.login(username, userpassword)
 
     def close_browser(self):
         self.driver.close()
